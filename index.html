@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Responsive Dialogbox 1.0.0</title>
+	<link rel="stylesheet" type="text/css" href="dialog.css">
+</head>
+<body>
+	<h1>Custom Responsive Dialogbox 1.0.0</h1>
+	<p>Click the buttons below to show/hide the dialog.</p>
+	<div class="dialog" id="demo-dialog">
+	    <div class="dialog-box">
+	        <div class="dialog-content">
+	            <div class="dialog-heading">
+	                <h3 class="dialog-title">Dialog Heading</h3>
+	                <button class="dialog-close" data-toggle="dialog">&times;</button>
+	            </div>
+	            <div class="dialog-body">
+	                Dialog body and content for dialog will go here...
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<button onclick="showDialog()">Show Dialog</button>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="dialog.js"></script>
+	<script type="text/javascript">
+
+		// Dialog show / hide event callbacks
+		$("#demo-dialog").on("dialog.show", function(){
+			console.log("Dialog shown");
+		});
+		$("#demo-dialog").on("dialog.hide", function(){
+			console.log("Dialog hidden");
+		});
+
+		// Show / Hide dialog functions
+		function showDialog(){
+			$("#demo-dialog").dialog('show');
+		}
+		function hideDialog(){
+			$("#demo-dialog").dialog('hide');
+		}
+	</script>
+</body>
+</html>

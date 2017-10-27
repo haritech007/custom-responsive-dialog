@@ -1,0 +1,99 @@
+/***************************
+Dialog.css.1.0.0
+@Author: Hari Mohan Thakur
+@Date: 27-10-2017
+****************************/
+body.dialog-open{
+    overflow: hidden !important;
+}
+.dialog {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 15px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 0;
+    display: none;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+}
+.dialog.open{
+    display: block;
+}
+.dialog.open.fade{
+    opacity: 1;
+}
+.dialog .dialog-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+	-moz-transition: 0.3s all ease-in-out;
+	-o-transition: 0.3s all ease-in-out;
+	-ms-transition: 0.3s all ease-in-out;
+}
+.dialog.open.fade .dialog-box{
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+.dialog .dialog-content{
+    background-color: #fff;
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    -ms-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    -o-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+.dialog .dialog-heading{
+    padding: 15px;
+    border-bottom: 1px #ddd solid;
+}
+.dialog .dialog-body{
+    padding: 15px;
+}
+.dialog .dialog-heading::before, .dialog .dialog-heading::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+.dialog .dialog-heading .dialog-title{
+    float: left;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+.dialog .dialog-heading .dialog-close {
+    float: right;
+    font-size: 24px;
+    border-radius: 30px;
+    border: 0 none;
+    padding: 0;
+    text-align: center;
+    background: none;
+    line-height: 21px;
+    cursor: pointer;
+}
