@@ -4,17 +4,17 @@ Custom dialog box like Bootstrap modal, can crate modal boxes or dialog boxes, m
 ## Show / Hide the dialog ##
 
 ### Show the dialog ###
-``` $("#your-dialog").dialog('show'); ```
+$("#your-dialog").dialog('show');
 
 ### Hide the dialog ###
-``` $("#your-dialog").dialog('hide'); ```
+$("#your-dialog").dialog('hide');
 
 ### Callback for show dialog ###
-``` $("#your-dialog").on('dialog.show',function(){
+$("#your-dialog").on('dialog.show',function(){
         // Do something on dialog shown
-}); ```
+});
 
 ### Callback for hide dialog ###
-``` $("#your-dialog").on('dialog.hide',function(){
+$("#your-dialog").on('dialog.hide',function(){
         // Do something on dialog hide
-}); ```
+});
